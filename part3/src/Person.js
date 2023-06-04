@@ -1,9 +1,3 @@
-//if under 18 say you must be 18 to vote else please go vote!
-
-//display max 6 char of name
-
-//display hobbie list
-
 function Person(props) {
     let canVote = "you must be 18 to vote";
     if(props.age >= 18){
@@ -20,7 +14,7 @@ function Person(props) {
         <p className="voting">{canVote}</p>
         <h2>Hobbies</h2>
         <ul className="hobbies">
-            {props.hobbies.map(hob => <li>{hob}</li>)}
+            {props.hobbies.map((hob,i) => <li key = {i}>{hob}</li>)}
         </ul>
     </div>
     );
